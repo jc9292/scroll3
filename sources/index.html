@@ -2,84 +2,41 @@
 <head> 
 <meta charset="utf-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"> 
- 
 <title>iScroll demo: carousel</title> 
- 
-<script type="text/javascript" src="iScroll5.js"></script> 
- 
+<script type="text/javascript" src="iscroll5.js"></script> 
 <script type="text/javascript"> 
 function _dir(s){console.dir(s)}
 var myScroll; 
- 
 function loaded () { 
 	myScroll = new IScroll('#wrapper', { 
 		scrollX: true, 
 		scrollY: false, 
 		momentum: false, 
-		snap:"img", 
+		snap:"div", 
 		snapSpeed: 400, 
 		keyBindings: true,
 		snapThreshold:1
-		 
 	}); 
 } 
- 
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false); 
 </script> 
- 
- 
 <style type="text/css"> 
-/*#wrapper { 
-	width: 670px; 
-	height: 100%; 
-	margin: 0 auto; 
-	border:10px solid #f00;
-	overflow:hidden;
-} 
- 
-#scroller { 
-	position: absolute;
-	z-index: 1; 
-	-webkit-tap-highlight-color: rgba(0,0,0,0); 
-	width: auto; 
-	height: 100%; 
-	-webkit-transform: translateZ(0); 
-	-moz-transform: translateZ(0); 
-	-ms-transform: translateZ(0); 
-	-o-transform: translateZ(0); 
-	transform: translateZ(0); 
-	-webkit-touch-callout: none; 
-	-webkit-user-select: none; 
-	-moz-user-select: none; 
-	-ms-user-select: none; 
-	user-select: none; 
-	-webkit-text-size-adjust: none; 
-	-moz-text-size-adjust: none; 
-	-ms-text-size-adjust: none; 
-	-o-text-size-adjust: none; 
-	text-size-adjust: none; 
-	background-color: #444; 
-	white-space:nowrap;
-} */
- 
+body { background:#f00; margin:0; padding:0; }
 #wrapper {
 	position: absolute;
 	z-index: 1;
-	top: 0px;
+	top: 80px;
 	left: 0;
 	width: 100%;
 	height:100%;
 	overflow: hidden;
-	
 }
-#scroller img{ 
+#scroller div{
+	float:left;
 	margin:0px; 
-	padding:0px; 
-	display:inline-block;
-	width:570px;
+	padding:0px;
+	width:100%;
 } 
- 
- 
 #scroller {
 	position: absolute;
 	z-index: 1;
@@ -101,47 +58,19 @@ document.addEventListener('touchmove', function (e) { e.preventDefault(); }, fal
 	-o-text-size-adjust: none;
 	text-size-adjust: none;
 }
-
-#scroller .list {
-	width:auto;
-	white-space:nowrap;
-}
-#scroller .list img:nth-child(3n-1){
-	margin:0px 40px;
-	padding:0px 40px;
-}
-
 </style> 
 </head> 
- 
 <body onload="loaded()"> 
-
 <div id="wrapper"> 
 	<div id="scroller">
 		<div class="list">
-			<img src="img/img1.png">
-			<img src="img/img2.png">
-			<img src="img/img3.png">
-			<img src="img/img4.png">
-			<img src="img/img5.png">
-			<img src="img/img6.png">
-			<img src="img/img7.png">
-			<img src="img/img8.png">
-			<img src="img/img9.png">
-			<img src="img/img10.png">
-			<img src="img/img11.png">
-			<img src="img/img12.png">
-			<img src="img/img13.png">
-			<img src="img/img14.png">
-			<img src="img/img5.png">
-			<img src="img/img6.png">
-			<img src="img/img7.png">
-			<img src="img/img8.png">
-			<img src="img/img9.png">
-			<img src="img/img10.png">
+			<div>page1</div>
+			<div>page2</div>
+			<div>page3</div>
+			<div>page4</div>
+			<div>page5</div>
 		</div>
 	</div> 
 </div> 
-
 </body> 
 </html>
