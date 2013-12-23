@@ -31,7 +31,8 @@ body { background:#f00; margin:0; padding:0; }
 	height:100%;
 	overflow: hidden;
 }
-#scroller div{
+#scroller span{
+	display:block;
 	float:left;
 	margin:0px; 
 	padding:0px;
@@ -64,11 +65,10 @@ body { background:#f00; margin:0; padding:0; }
 <div id="wrapper"> 
 	<div id="scroller">
 		<div class="list">
-			<div>page1</div>
-			<div>page2</div>
-			<div>page3</div>
-			<div>page4</div>
-			<div>page5</div>
+			<span style="background:#cc0">page1</span>
+			<span style="background:#c0c">page2</span>
+			<span style="background:#0cc">page3</span>
+			<span style="background:#ccc">page4</span>
 		</div>
 	</div> 
 </div> 
